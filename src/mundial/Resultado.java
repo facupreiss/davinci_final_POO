@@ -5,6 +5,14 @@ public class Resultado {
     private int golesLocal;
     private int golesVisitante;
 
+    // SETEO EL SCORE
+    public int setGolesLocal() {
+        return golesLocal = (int)(Math.random()*6+1);
+    }
+    public int setGolesVisitante() {
+        return golesVisitante = (int)(Math.random()*6+1);
+    }
+    
     public int getGolesLocal() {
         return golesLocal;
     }
@@ -13,8 +21,9 @@ public class Resultado {
         return golesVisitante;
     }
 
+
     public boolean ganoLocal () {
-        boolean ganoLocal;
+        boolean ganoLocal = true;
 
         if (getGolesLocal()>golesVisitante){
             ganoLocal = true;

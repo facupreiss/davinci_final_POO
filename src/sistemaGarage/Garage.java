@@ -38,10 +38,10 @@ public class Garage {
     }
 
     public double precioCambiarTodasLasRuedas (){
-        
+        return 4.0;
     }
 
     public double kilometrajeMedio (double kilometrajeMedio) {
-
+        return 4.0;
     }
 }

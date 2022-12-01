@@ -2,7 +2,7 @@ package mundial;
 
 import java.util.ArrayList;
 
-public class EtapaMundial {
+public abstract class EtapaMundial {
 
     private String descripcionEtapa;
     private ArrayList<Partido> partidos;
@@ -22,8 +22,7 @@ public class EtapaMundial {
         return partidos;
     }
 
-    public ArrayList<Equipo> getEquiposQueAvanzan (){
-    }
+    public abstract ArrayList<Equipo> getEquiposQueAvanzan ();
 
 
 }
