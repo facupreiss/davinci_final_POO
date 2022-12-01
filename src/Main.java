@@ -2,24 +2,37 @@ import java.util.Date;
 import mundial.Equipo;
 import mundial.Partido;
 import mundial.Resultado;
+import mundial.Grupo;
 
 public class Main {
     public static void main(String[] args) {
+
         Equipo qatar = new Equipo("Qatar");
         Equipo paisesBajos = new Equipo("Paises Bajos");
         Equipo ecuador = new Equipo("Ecuador");
         Equipo senegal = new Equipo("Senegal");
 
-        Date qatarEcuadorFecha = new Date(2022,7,18);
+        Partido qatarEcuador = new Partido(new Date(2022, 7, 18), qatar,ecuador);
+        Partido paiseBajesSenegal = new Partido(new Date(2022, 7, 18), paisesBajos,senegal);
+        Partido qatarSenegal = new Partido(new Date(2022, 7, 18), qatar,senegal);
+        Partido ecuadorPaiseBajos = new Partido(new Date(2022, 7, 18), ecuador,paisesBajos);
+        Partido qatarPaisesBajos = new Partido(new Date(2022, 7, 18), qatar,paisesBajos);
+        Partido ecuadorSenegal = new Partido(new Date(2022, 7, 18), ecuador,senegal);
 
-        Partido qatarEcuador = new Partido(qatarEcuadorFecha, qatar,ecuador);
+        Grupo grupoA = new Grupo("Grupo A");
+        grupoA.addPartido(qatarEcuador);
+        grupoA.addPartido(paiseBajesSenegal);
+        grupoA.addPartido(qatarSenegal);
+        grupoA.addPartido(ecuadorPaiseBajos);
+        grupoA.addPartido(qatarPaisesBajos);
+        grupoA.addPartido(ecuadorSenegal);
 
         Resultado qatarEcuadorResultado = new Resultado();
+        qatarEcuadorResultado.setScore();
 
-        System.out.println("El marcador local es " + qatarEcuadorResultado.setGolesLocal());
-        System.out.println("El marcador visitante es " + qatarEcuadorResultado.setGolesVisitante());
+        qatarEcuador.setResultado(qatarEcuadorResultado);
+        System.out.println(qatarEcuador.getLocal());
 
-        System.out.println(qatarEcuadorResultado.getGolesLocal());
-        System.out.println(qatarEcuadorResultado.getGolesVisitante());
+
     }
 }

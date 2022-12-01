@@ -7,8 +7,9 @@ public class Equipo {
     private ArrayList<Partido> partidosJugados;
 
     public Equipo(String nombre) {
-        this.nombre = nombre;
+        this.setNombre(nombre);
     }
+
     public String getNombre() {
         return nombre;
     }

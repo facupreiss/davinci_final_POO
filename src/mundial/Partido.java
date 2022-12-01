@@ -21,11 +21,15 @@ public class Partido {
         return resultado;
     }
 
-    public Equipo getLocal() {
-        return local;
-    }
+    public Equipo getLocal() { return local; }
 
     public Equipo getVisitante() {
         return visitante;
     }
+
+    public void setResultado(Resultado resultado) {
+        this.resultado = resultado;
+    }
+
+
 }
