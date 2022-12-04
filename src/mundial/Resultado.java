@@ -6,13 +6,11 @@ public class Resultado {
     private int golesVisitante;
 
     // SETEO EL SCORE
-    public int setGolesLocal() {
-        return golesLocal = (int)(Math.random()*6+1);
+    public void setResultado () {
+         golesLocal = (int)(Math.random()*4);
+         golesVisitante = (int)(Math.random()*4);
     }
-    public int setGolesVisitante() {
-        return golesVisitante = (int)(Math.random()*6+1);
-    }
-    
+
     public int getGolesLocal() {
         return golesLocal;
     }
@@ -29,10 +27,10 @@ public class Resultado {
             ganoLocal = true;
             System.out.println("Gano el equipo local");
 
-    } else if (getGolesLocal()<golesVisitante){
+        } else if (getGolesLocal()<golesVisitante){
             ganoLocal = false;
             System.out.println("Gano el equipo visitante");
-    }
+        }
         return ganoLocal;
     }
 
