@@ -9,11 +9,10 @@ public class Grupo extends EtapaMundial {
         this.setPartidos(new ArrayList<Partido>(0));
     }
 
-
     @Override
     public ArrayList<Equipo> getEquiposQueAvanzan() {
+
         return null;
-    //HAY QUE HACER ESTE METODO
     }
 
 }

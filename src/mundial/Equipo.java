@@ -32,6 +32,7 @@ public class Equipo {
     }
 
     public int getPuntaje() {
+
         return puntaje;
     }
 
@@ -41,8 +42,6 @@ public class Equipo {
 
     @Override
     public String toString() {
-        return  nombre + '\'' +
-                ", puntaje=" + puntaje +
-                '}';
+        return  nombre + " puntaje: " + puntaje;
     }
 }

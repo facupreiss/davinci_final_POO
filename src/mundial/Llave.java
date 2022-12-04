@@ -11,8 +11,12 @@ public class Llave extends EtapaMundial{
 
     @Override
     public ArrayList<Equipo> getEquiposQueAvanzan() {
+        ArrayList<Equipo> equiposQueAvanzan = new ArrayList;
+        int i;
+        for (i = 0; i < super.getPartidos().size(); i++)
+            
         return null;
-    //HAY QUE HACER ESTE METODO
+
     }
 
 }

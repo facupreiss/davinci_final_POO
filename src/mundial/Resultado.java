@@ -19,7 +19,7 @@ public class Resultado {
     }
 
     public boolean ganoLocal () {
-        boolean ganoLocal = true;
+        boolean ganoLocal = false;
 
         if (getGolesLocal()>getGolesVisitante()){
             ganoLocal = true;
@@ -42,9 +42,7 @@ public class Resultado {
 
     @Override
     public String toString() {
-        return "Resultado:" +
-                "golesLocal=" + golesLocal +
-                ", golesVisitante=" + golesVisitante +
-                '}';
+        return  golesLocal +
+                " - " + golesVisitante;
     }
 }

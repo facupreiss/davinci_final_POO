@@ -28,9 +28,7 @@ public abstract class EtapaMundial {
         this.partidos = partidos;
     }
 
-    public ArrayList<Partido> getPartidos() {
-        return partidos;
-    }
+    public ArrayList<Partido> getPartidos() { return partidos;    }
 
     public void addPartido (Partido partido) {
         getPartidos().add(partido);

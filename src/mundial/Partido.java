@@ -61,14 +61,12 @@ public class Partido {
         }
     }
 
-
     @Override
     public String toString() {
-        return "Partido = " +
-                " local: " + local +
-                ", visitante: " + visitante +
-                " " + resultado +
-                '}';
+        return "Partido: " + getLocal().getNombre()+ " " +
+                getResultado().toString() + " " +
+                getVisitante().getNombre();
+
     }
 
 
