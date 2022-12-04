@@ -10,10 +10,7 @@ public class Partido {
     private Resultado resultado;
 
 //CONSTRUCTOR
-    public Partido(Date fecha, Equipo local, Equipo visitante) {
-        this.setFecha(fecha);
-        this.setLocal(local);
-        this.setVisitante(visitante);
+    public Partido() {
     }
 
     public Partido(Date fecha, Equipo local, Equipo visitante, Resultado resultado) {
@@ -31,9 +28,7 @@ public class Partido {
         this.fecha = fecha;
     }
 
-    public Equipo getLocal() {
-        return local;
-    }
+    public Equipo getLocal() { return local; }
 
     public void setLocal(Equipo local) {
         this.local = local;
@@ -54,4 +49,27 @@ public class Partido {
     public void setResultado(Resultado resultado) {
         this.resultado = resultado;
     }
+
+    public void setPuntos () {
+        if (getResultado().ganoLocal()) {
+            getLocal().setPuntaje(3);
+        } else if (getResultado().empate()) {
+            getLocal().setPuntaje(1);
+            getVisitante().setPuntaje(1);
+        } else {
+            getVisitante().setPuntaje(3);
+        }
+    }
+
+
+    @Override
+    public String toString() {
+        return "Partido = " +
+                " local: " + local +
+                ", visitante: " + visitante +
+                " " + resultado +
+                '}';
+    }
+
+
 }

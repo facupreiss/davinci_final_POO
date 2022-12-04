@@ -7,10 +7,13 @@ public abstract class EtapaMundial {
     private String descripcionEtapa;
     private ArrayList<Partido> partidos;
 
+    //CONSTRUCTOR
     public EtapaMundial() {
     }
 
-    public EtapaMundial(String descripcionEtapa, ArrayList<Partido> partidos) {
+    public EtapaMundial(String descripcionEtapa) {
+        setDescripcionEtapa(descripcionEtapa);
+        setPartidos(new ArrayList<Partido>(0));
     }
 
     public String getDescripcionEtapa() {

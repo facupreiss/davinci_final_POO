@@ -8,16 +8,12 @@ public class Equipo {
     private ArrayList<Partido> partidosJugados;
     private int puntaje;
 
-    public Equipo(String nombre, int puntaje) {
+    public Equipo(String nombre) {
         this.setNombre(nombre);
         this.setPuntaje(0);
+        this.setPartidosJugados(new ArrayList<Partido>(0));
     }
 
-    public Equipo(String nombre, int puntaje, ArrayList<Partido> partidosJugados) {
-        this.setNombre(nombre);
-        this.setPuntaje(0);
-        this.setPartidosJugados(partidosJugados);
-    }
 
     public String getNombre() {
         return nombre;
@@ -40,6 +36,13 @@ public class Equipo {
     }
 
     public void setPuntaje(int puntaje) {
-        this.puntaje = puntaje;
+        this.puntaje += puntaje;
+    }
+
+    @Override
+    public String toString() {
+        return  nombre + '\'' +
+                ", puntaje=" + puntaje +
+                '}';
     }
 }

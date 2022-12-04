@@ -2,9 +2,11 @@ import java.util.Date;
 import mundial.Equipo;
 import mundial.Partido;
 import mundial.Resultado;
+import mundial.Grupo;
 
 public class Main {
     public static void main(String[] args) {
+
         Equipo qatar = new Equipo("Qatar");
         Equipo paisesBajos = new Equipo("Paises Bajos");
         Equipo ecuador = new Equipo("Ecuador");
@@ -45,14 +47,44 @@ public class Main {
         Equipo corea = new Equipo("Corea del Sur");
         Equipo ghana = new Equipo("Ghana");
 
-        Date qatarEcuadorFecha = new Date(2022,7,18);
+        //CREO LOS PARTIDOS DEL GRUPO A
+        Partido qatarEcuador = new Partido(new Date(2022, 7, 18), qatar,ecuador, new Resultado());
+        Partido paiseBajosSenegal = new Partido(new Date(2022, 7, 18), paisesBajos,senegal, new Resultado());
+        Partido qatarSenegal = new Partido(new Date(2022, 7, 18), qatar,senegal, new Resultado());
+        Partido ecuadorPaiseBajos = new Partido(new Date(2022, 7, 18), ecuador,paisesBajos, new Resultado());
+        Partido qatarPaisesBajos = new Partido(new Date(2022, 7, 18), qatar,paisesBajos, new Resultado());
+        Partido ecuadorSenegal = new Partido(new Date(2022, 7, 18), ecuador,senegal, new Resultado());
 
-        Partido qatarEcuador = new Partido(qatarEcuadorFecha, qatar,ecuador);
+        //CREO EL GRUPO A Y LE AGREGO LOS PARTIDOS AL ARRAY
+        Grupo grupoA = new Grupo("Grupo A");
+        grupoA.addPartido(qatarEcuador);
+        grupoA.addPartido(paiseBajosSenegal);
+        grupoA.addPartido(qatarSenegal);
+        grupoA.addPartido(ecuadorPaiseBajos);
+        grupoA.addPartido(qatarPaisesBajos);
+        grupoA.addPartido(ecuadorSenegal);
 
-        Resultado qatarEcuadorResultado = new Resultado();
+        qatarEcuador.setPuntos();
+        qatarSenegal.setPuntos();
+        qatarPaisesBajos.setPuntos();
+        paiseBajosSenegal.setPuntos();
+        ecuadorPaiseBajos.setPuntos();
+        ecuadorSenegal.setPuntos();
 
-        qatarEcuadorResultado.setResultado();
-        System.out.println(qatarEcuadorResultado.getGolesLocal());
-        System.out.println(qatarEcuadorResultado.getGolesVisitante());
+
+       System.out.println(qatar);
+        System.out.println(ecuador);
+        System.out.println(paisesBajos);
+        System.out.println(senegal);
+
+       System.out.println(qatarEcuador);
+       System.out.println(qatarSenegal);
+       System.out.println(qatarPaisesBajos);
+        System.out.println(paiseBajosSenegal);
+        System.out.println(ecuadorPaiseBajos);
+        System.out.println(ecuadorSenegal);
+
+
+
     }
 }
