@@ -238,7 +238,6 @@ public class Main {
         portugalGhana.setPuntos();
         uruguayCorea.setPuntos();
 
-
         System.out.println(qatarEcuador);
         System.out.println(qatarSenegal);
         System.out.println(qatarPaisesBajos);
@@ -246,10 +245,10 @@ public class Main {
         System.out.println(ecuadorPaiseBajos);
         System.out.println(ecuadorSenegal);
         System.out.println();
-        System.out.println(qatar);
-        System.out.println(ecuador);
-        System.out.println(paisesBajos);
-        System.out.println(senegal);
+        System.out.println(qatar + " " + qatar.getPuntaje());
+        System.out.println(ecuador + " " + ecuador.getPuntaje());
+        System.out.println(paisesBajos + " " + paisesBajos.getPuntaje());
+        System.out.println(senegal + " " + senegal.getPuntaje());
 
 
         Llave octavos = new Llave("Octavos de final");
@@ -262,6 +261,39 @@ public class Main {
         octavos.addPartido(belgicaCroacia);
         octavos.addPartido(inglaterraEstadosUnidos);
 
+        System.out.println();
+
+        System.out.println(octavos.getEquiposQueAvanzan());
+
+        System.out.println();
+
+        Llave cuartos = new Llave("Cuartos de final");
+        Partido cuartos1 = new Partido(new Date(2022, 7, 18), octavos.getEquiposQueAvanzan().get(0),octavos.getEquiposQueAvanzan().get(1), new Resultado());
+        Partido cuartos2 = new Partido(new Date(2022, 7, 18), octavos.getEquiposQueAvanzan().get(2),octavos.getEquiposQueAvanzan().get(3), new Resultado());
+        Partido cuartos3 = new Partido(new Date(2022, 7, 18), octavos.getEquiposQueAvanzan().get(4),octavos.getEquiposQueAvanzan().get(5), new Resultado());
+        Partido cuartos4 = new Partido(new Date(2022, 7, 18), octavos.getEquiposQueAvanzan().get(6),octavos.getEquiposQueAvanzan().get(7), new Resultado());
+
+        cuartos.addPartido(cuartos1);
+        cuartos.addPartido(cuartos2);
+        cuartos.addPartido(cuartos3);
+        cuartos.addPartido(cuartos4);
+
+        System.out.println(cuartos.getEquiposQueAvanzan());
+
+        Llave semis = new Llave("Semifinales");
+        Partido semis1 = new Partido(new Date(2022, 7, 18), cuartos.getEquiposQueAvanzan().get(0),cuartos.getEquiposQueAvanzan().get(1), new Resultado());
+        Partido semis2 = new Partido(new Date(2022, 7, 18), cuartos.getEquiposQueAvanzan().get(2),cuartos.getEquiposQueAvanzan().get(3), new Resultado());
+
+        semis.addPartido(semis1);
+        semis.addPartido(semis2);
+
+        System.out.println(semis.getEquiposQueAvanzan());
+
+        Llave finalMundial = new Llave ("Final");
+        Partido final1 = new Partido(new Date(2022, 7, 18), semis.getEquiposQueAvanzan().get(0),semis.getEquiposQueAvanzan().get(1), new Resultado());
+        finalMundial.addPartido(final1);
+
+        System.out.println("El campeón mundial es: " + finalMundial.getEquiposQueAvanzan());
 
 
 

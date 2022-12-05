@@ -11,12 +11,16 @@ public class Llave extends EtapaMundial{
 
     @Override
     public ArrayList<Equipo> getEquiposQueAvanzan() {
-        ArrayList<Equipo> equiposQueAvanzan = new ArrayList;
-        int i;
-        for (i = 0; i < super.getPartidos().size(); i++)
-            
-        return null;
+        ArrayList<Equipo> equiposQueAvanzan = new ArrayList();
 
+        for (int i = 0; i < super.getPartidos().size();) {
+
+            if (super.getPartidos().get(i).getResultado().ganoLocal()) {
+        equiposQueAvanzan.add(super.getPartidos().get(i).getLocal());
+            }
+            else { equiposQueAvanzan.add(super.getPartidos().get(i).getVisitante());}
+            i++;
+        }
+        return equiposQueAvanzan;
     }
-
 }
