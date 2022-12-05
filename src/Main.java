@@ -46,6 +46,9 @@ public class Main {
         Equipo corea = new Equipo("Corea del Sur");
         Equipo ghana = new Equipo("Ghana");
 
+        System.out.println("Fase de grupos");
+        System.out.println();
+
         //CREO LOS PARTIDOS DEL GRUPO A
         Partido qatarEcuador = new Partido(new Date(2022, 7, 18), qatar,ecuador, new Resultado());
         Partido paiseBajosSenegal = new Partido(new Date(2022, 7, 18), paisesBajos,senegal, new Resultado());
@@ -69,6 +72,21 @@ public class Main {
         paiseBajosSenegal.setPuntos();
         ecuadorPaiseBajos.setPuntos();
         ecuadorSenegal.setPuntos();
+
+        System.out.println(grupoA.getDescripcionEtapa());
+        System.out.println();
+        System.out.println(qatarEcuador);
+        System.out.println(qatarSenegal);
+        System.out.println(qatarPaisesBajos);
+        System.out.println(paiseBajosSenegal);
+        System.out.println(ecuadorPaiseBajos);
+        System.out.println(ecuadorSenegal);
+        System.out.println();
+        System.out.println(qatar + " " + qatar.getPuntaje());
+        System.out.println(ecuador + " " + ecuador.getPuntaje());
+        System.out.println(paisesBajos + " " + paisesBajos.getPuntaje());
+        System.out.println(senegal + " " + senegal.getPuntaje());
+        System.out.println();
 
         //CREO LOS PARTIDOS DEL GRUPOB
         Partido inglaterraIran = new Partido(new Date(2022, 7, 18), inglaterra,iran, new Resultado());
@@ -94,6 +112,21 @@ public class Main {
         inglaterraEstadosUnidos.setPuntos();
         galesIran.setPuntos();
 
+        System.out.println(grupoB.getDescripcionEtapa());
+        System.out.println();
+        System.out.println(inglaterraIran);
+        System.out.println(estadosUnidosGales);
+        System.out.println(inglaterraGales);
+        System.out.println(estadosUnidosIran);
+        System.out.println(inglaterraEstadosUnidos);
+        System.out.println(galesIran);
+        System.out.println();
+        System.out.println(inglaterra + " " + inglaterra.getPuntaje());
+        System.out.println(estadosUnidos + " " + estadosUnidos.getPuntaje());
+        System.out.println(iran + " " + iran.getPuntaje());
+        System.out.println(gales + " " + gales.getPuntaje());
+        System.out.println();
+
         //CREO LOS PARTIDOS DEL GRUPO C
         Partido argentinaArabiaSaudita = new Partido(new Date(2022, 7, 18), argentina,arabiaSaudita, new Resultado());
         Partido mexicoPolonia = new Partido(new Date(2022, 7, 18), mexico,polonia, new Resultado());
@@ -117,6 +150,21 @@ public class Main {
         poloniaArabiaSaudita.setPuntos();
         argentinaPolonia.setPuntos();
         mexicoArabiaSaudita.setPuntos();
+
+        System.out.println(grupoC.getDescripcionEtapa());
+        System.out.println();
+        System.out.println(argentinaArabiaSaudita);
+        System.out.println(mexicoPolonia);
+        System.out.println(argentinaMexico);
+        System.out.println(poloniaArabiaSaudita);
+        System.out.println(argentinaPolonia);
+        System.out.println(mexicoArabiaSaudita);
+        System.out.println();
+        System.out.println(argentina + " " + argentina.getPuntaje());
+        System.out.println(mexico + " " + mexico.getPuntaje());
+        System.out.println(polonia + " " + polonia.getPuntaje());
+        System.out.println(arabiaSaudita + " " + arabiaSaudita.getPuntaje());
+        System.out.println();
 
         //CREO LOS PARTIDOS DEL GRUPO D
         Partido franciaDinamarca = new Partido(new Date(2022, 7, 18), francia,dinamarca, new Resultado());
@@ -142,6 +190,21 @@ public class Main {
         franciaTunez.setPuntos();
         dinamarcaAustralia.setPuntos();
 
+        System.out.println(grupoD.getDescripcionEtapa());
+        System.out.println();
+        System.out.println(franciaDinamarca);
+        System.out.println(tunezAustralia);
+        System.out.println(franciaAustralia);
+        System.out.println(tunezDinamarca);
+        System.out.println(franciaTunez);
+        System.out.println(dinamarcaAustralia);
+        System.out.println();
+        System.out.println(francia + " " + francia.getPuntaje());
+        System.out.println(dinamarca + " " + dinamarca.getPuntaje());
+        System.out.println(tunez + " " + tunez.getPuntaje());
+        System.out.println(australia + " " + australia.getPuntaje());
+        System.out.println();
+
         //CREO LOS PARTIDOS DEL GRUPO E
         Partido espanaAlemania = new Partido(new Date(2022, 7, 18), espana,alemania, new Resultado());
         Partido japonCostaRica = new Partido(new Date(2022, 7, 18), japon,costaRica, new Resultado());
@@ -166,6 +229,21 @@ public class Main {
         espanaCostaRica.setPuntos();
         alemaniaJapon.setPuntos();
 
+        System.out.println(grupoE.getDescripcionEtapa());
+        System.out.println();
+        System.out.println(espanaAlemania);
+        System.out.println(japonCostaRica);
+        System.out.println(espanaJapon);
+        System.out.println(alemaniaCostaRica);
+        System.out.println(espanaCostaRica);
+        System.out.println(alemaniaJapon);
+        System.out.println();
+        System.out.println(espana + " " + espana.getPuntaje());
+        System.out.println(alemania + " " + alemania.getPuntaje());
+        System.out.println(japon + " " + japon.getPuntaje());
+        System.out.println(costaRica + " " + costaRica.getPuntaje());
+        System.out.println();
+
         //CREO LOS PARTIDOS DEL GRUPO F
         Partido belgicaCroacia = new Partido(new Date(2022, 7, 18), belgica,croacia, new Resultado());
         Partido marruecosCanada = new Partido(new Date(2022, 7, 18), marruecos,canada, new Resultado());
@@ -183,12 +261,27 @@ public class Main {
         grupoF.addPartido(belgicaCanada);
         grupoF.addPartido(marruecosCroacia);
 
-        belgicaCanada.setPuntos();
+        belgicaCroacia.setPuntos();
         marruecosCanada.setPuntos();
         belgicaMarruecos.setPuntos();
         croaciaCanada.setPuntos();
         belgicaCanada.setPuntos();
         marruecosCroacia.setPuntos();
+
+        System.out.println(grupoF.getDescripcionEtapa());
+        System.out.println();
+        System.out.println(belgicaCroacia);
+        System.out.println(marruecosCanada);
+        System.out.println(belgicaMarruecos);
+        System.out.println(croaciaCanada);
+        System.out.println(belgicaCanada);
+        System.out.println(marruecosCroacia);
+        System.out.println();
+        System.out.println(belgica + " " + belgica.getPuntaje());
+        System.out.println(croacia + " " + croacia.getPuntaje());
+        System.out.println(marruecos + " " + marruecos.getPuntaje());
+        System.out.println(canada + " " + canada.getPuntaje());
+        System.out.println();
 
         //CREO LOS PARTIDOS DEL GRUPO G
         Partido brasilSerbia = new Partido(new Date(2022, 7, 18), brasil,serbia, new Resultado());
@@ -214,6 +307,21 @@ public class Main {
         brasilCamerun.setPuntos();
         suizaSerbia.setPuntos();
 
+        System.out.println(grupoG.getDescripcionEtapa());
+        System.out.println();
+        System.out.println(brasilSerbia);
+        System.out.println(suizaCamerun);
+        System.out.println(brasilSuiza);
+        System.out.println(serbiaCamerun);
+        System.out.println(brasilCamerun);
+        System.out.println(suizaSerbia);
+        System.out.println();
+        System.out.println(brasil + " " + brasil.getPuntaje());
+        System.out.println(serbia + " " + serbia.getPuntaje());
+        System.out.println(suiza + " " + suiza.getPuntaje());
+        System.out.println(camerun + " " + camerun.getPuntaje());
+        System.out.println();
+
         //CREO LOS PARTIDOS DEL GRUPO H
         Partido portugalUruguay = new Partido(new Date(2022, 7, 18), portugal,uruguay, new Resultado());
         Partido coreaGhana = new Partido(new Date(2022, 7, 18), corea,ghana, new Resultado());
@@ -238,19 +346,22 @@ public class Main {
         portugalGhana.setPuntos();
         uruguayCorea.setPuntos();
 
-        System.out.println(qatarEcuador);
-        System.out.println(qatarSenegal);
-        System.out.println(qatarPaisesBajos);
-        System.out.println(paiseBajosSenegal);
-        System.out.println(ecuadorPaiseBajos);
-        System.out.println(ecuadorSenegal);
+        System.out.println(grupoH.getDescripcionEtapa());
         System.out.println();
-        System.out.println(qatar + " " + qatar.getPuntaje());
-        System.out.println(ecuador + " " + ecuador.getPuntaje());
-        System.out.println(paisesBajos + " " + paisesBajos.getPuntaje());
-        System.out.println(senegal + " " + senegal.getPuntaje());
+        System.out.println(portugalUruguay);
+        System.out.println(coreaGhana);
+        System.out.println(portugalCorea);
+        System.out.println(uruguayGhana);
+        System.out.println(portugalGhana);
+        System.out.println(uruguayCorea);
+        System.out.println();
+        System.out.println(portugal + " " + portugal.getPuntaje());
+        System.out.println(uruguay + " " + uruguay.getPuntaje());
+        System.out.println(corea + " " + corea.getPuntaje());
+        System.out.println(ghana + " " + ghana.getPuntaje());
+        System.out.println();
 
-
+        //FASES ELIMINATORIAS
         Llave octavos = new Llave("Octavos de final");
         octavos.addPartido(argentinaPolonia);
         octavos.addPartido(alemaniaJapon);
@@ -261,10 +372,8 @@ public class Main {
         octavos.addPartido(belgicaCroacia);
         octavos.addPartido(inglaterraEstadosUnidos);
 
-        System.out.println();
-
+        System.out.println(octavos.getDescripcionEtapa());
         System.out.println(octavos.getEquiposQueAvanzan());
-
         System.out.println();
 
         Llave cuartos = new Llave("Cuartos de final");
@@ -278,7 +387,12 @@ public class Main {
         cuartos.addPartido(cuartos3);
         cuartos.addPartido(cuartos4);
 
-        System.out.println(cuartos.getEquiposQueAvanzan());
+        System.out.println(cuartos.getDescripcionEtapa());
+        System.out.println(cuartos1);
+        System.out.println(cuartos2);
+        System.out.println(cuartos3);
+        System.out.println(cuartos4);
+        System.out.println();
 
         Llave semis = new Llave("Semifinales");
         Partido semis1 = new Partido(new Date(2022, 7, 18), cuartos.getEquiposQueAvanzan().get(0),cuartos.getEquiposQueAvanzan().get(1), new Resultado());
@@ -287,12 +401,18 @@ public class Main {
         semis.addPartido(semis1);
         semis.addPartido(semis2);
 
-        System.out.println(semis.getEquiposQueAvanzan());
+        System.out.println(semis.getDescripcionEtapa());
+        System.out.println(semis1);
+        System.out.println(semis2);
+        System.out.println();
 
         Llave finalMundial = new Llave ("Final");
         Partido final1 = new Partido(new Date(2022, 7, 18), semis.getEquiposQueAvanzan().get(0),semis.getEquiposQueAvanzan().get(1), new Resultado());
         finalMundial.addPartido(final1);
 
+        System.out.println(finalMundial.getDescripcionEtapa());
+        System.out.println(final1);
+        System.out.println();
         System.out.println("El campeón mundial es: " + finalMundial.getEquiposQueAvanzan());
 
 
