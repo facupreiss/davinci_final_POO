@@ -17,8 +17,19 @@ public class Llave extends EtapaMundial{
 
             if (super.getPartidos().get(i).getResultado().ganoLocal()) {
         equiposQueAvanzan.add(super.getPartidos().get(i).getLocal());
+
+            } else if (super.getPartidos().get(i).getResultado().empate()) {
+                int a = (int) (Math.random() * 2);
+                if (a == 0)
+                {equiposQueAvanzan.add(super.getPartidos().get(i).getLocal());
+                }
+                if (a == 1)
+                {equiposQueAvanzan.add(super.getPartidos().get(i).getVisitante());
+                }
+
+            } else {
+                equiposQueAvanzan.add(super.getPartidos().get(i).getVisitante());
             }
-            else { equiposQueAvanzan.add(super.getPartidos().get(i).getVisitante());}
             i++;
         }
         return equiposQueAvanzan;

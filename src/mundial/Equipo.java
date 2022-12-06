@@ -32,7 +32,6 @@ public class Equipo {
     }
 
     public int getPuntaje() {
-
         return puntaje;
     }
 
