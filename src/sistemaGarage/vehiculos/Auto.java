@@ -17,4 +17,11 @@ public class Auto extends Vehiculo{
         this.numeroDePuertas = numeroDePuertas;
     }
 
+    @Override
+    public String toString() {
+        return "Auto:" + " kilometraje=" + getKilometraje() +
+                ", numeroDeRuedas=" + getNumeroDeRuedas() +
+                ", marca='" + getMarca() + ", numero de puertas:=" + getNumeroDePuertas() +
+                '}';
+    }
 }

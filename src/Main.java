@@ -1,6 +1,9 @@
 import java.util.Date;
 
 import mundial.*;
+import sistemaGarage.Garage;
+import sistemaGarage.vehiculos.Auto;
+import sistemaGarage.vehiculos.Moto;
 
 public class Main {
     public static void main(String[] args) {
@@ -449,6 +452,28 @@ public class Main {
         System.out.println();
         System.out.println("El campeón mundial es: " + finalMundial.getEquiposQueAvanzan());
 
+
+        System.out.println();
+        System.out.println();
+        System.out.println();
+//----------------------------------------------------------------------------------------------------------------------------------------
+
+        Garage garage = new Garage(200,10);
+
+        Auto auto1 = new Auto(1000, 4, "Peugeot", 4 );
+        Auto auto2 = new Auto(1000, 4, "Peugeot", 4 );
+        Auto auto3 = new Auto(1000, 4, "Peugeot", 4 );
+        Moto moto1 = new Moto(500, 2, "BMW", 250);
+
+        garage.agregarVehiculo(auto1);
+        garage.agregarVehiculo(auto2);
+        garage.agregarVehiculo(auto3);
+        garage.agregarVehiculo(moto1);
+
+        System.out.println(garage.getVehiculos());
+        System.out.println();
+        System.out.println("Precio para cambiar todas las ruedas: " + garage.precioCambiarTodasLasRuedas());
+        System.out.println("Kilometraje medio: " + garage.kilometrajeMedio());
 
 
 

@@ -16,4 +16,11 @@ public Moto (double kilometraje, int numeroDeRuedas, String marca, int cilindrad
         this.cilindrado = cilindrado;
     }
 
+    @Override
+    public String toString() {
+        return "Moto:" + " kilometraje=" + getKilometraje() +
+                ", numeroDeRuedas=" + getNumeroDeRuedas() +
+                ", marca=" + getMarca() + ", cilindrado=" + getCilindrado() +
+                '}';
+    }
 }

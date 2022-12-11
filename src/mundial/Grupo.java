@@ -24,7 +24,7 @@ public class Grupo extends EtapaMundial {
 
         equiposQueAvanzan.remove(0);
         equiposQueAvanzan.remove(0);
-        
+
         return equiposQueAvanzan;
     }
 

@@ -1,6 +1,6 @@
 package sistemaGarage.vehiculos;
 
-public class Vehiculo {
+public abstract class Vehiculo {
     private double kilometraje;
     private int numeroDeRuedas;
     private String marca;
@@ -33,5 +33,14 @@ public class Vehiculo {
 
     public void setMarca(String marca) {
         this.marca = marca;
+    }
+
+    @Override
+    public String toString() {
+        return "Vehiculo{" +
+                "kilometraje=" + kilometraje +
+                ", numeroDeRuedas=" + numeroDeRuedas +
+                ", marca='" + marca + '\'' +
+                '}';
     }
 }
