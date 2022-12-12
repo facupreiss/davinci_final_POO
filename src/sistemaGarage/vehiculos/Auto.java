@@ -19,9 +19,8 @@ public class Auto extends Vehiculo{
 
     @Override
     public String toString() {
-        return "Auto:" + " kilometraje=" + getKilometraje() +
-                ", numeroDeRuedas=" + getNumeroDeRuedas() +
-                ", marca='" + getMarca() + ", numero de puertas:=" + getNumeroDePuertas() +
-                '}';
+        return "Auto=" + " kilometraje:" + getKilometraje() +
+                ", numeroDeRuedas:" + getNumeroDeRuedas() +
+                ", marca:" + getMarca() + ", numero de puertas:" + getNumeroDePuertas();
     }
 }

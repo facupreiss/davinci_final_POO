@@ -45,7 +45,12 @@ public class Garage {
     }
 
     public void agregarVehiculo (Vehiculo vehiculo) {
+        if (getVehiculos().size()<getMaximaCapacidad()) {
         getVehiculos().add(vehiculo);
+            System.out.println("Su vehiculo fue agregado con exito");
+    } else {
+            System.out.println("Maxima capacidad excedida, su vehiculo no pudo ser agregado");
+        }
     }
 
     public void removerVehiculo (Vehiculo vehiculo) {
@@ -75,5 +80,17 @@ public class Garage {
         return kilometraje / getVehiculos().size();
     }
 
+    public void toStringVehiculos () {
+        for (int i = 0; i < getVehiculos().size();) {
+            System.out.println(getVehiculos().get(i).toString());
+            i++;
+        }
+    }
 
+    @Override
+    public String toString() {
+        return "Garage=" +
+                " precioPorRueda:" + getPrecioPorRueda() +
+                ", maximaCapacidad:" + getMaximaCapacidad();
+    }
 }
