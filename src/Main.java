@@ -289,18 +289,16 @@ public class Main {
         System.out.println();
         System.out.println();
 //----------------------------------------------------------------------------------------------------------------------------------------
-
+        System.out.println("Bienvenido al garage:");
         Garage garage = new Garage(200,5);
         garage.agregarVehiculo(new Auto(1000, 4, "Peugeot", 4 ));
         garage.agregarVehiculo(new Auto(1000, 4, "Peugeot", 4 ));
         garage.agregarVehiculo(new Auto(1000, 4, "Peugeot", 4 ));
         garage.agregarVehiculo(new Moto(500, 2, "BMW", 250));
         garage.agregarVehiculo(new Moto(500, 2, "BMW", 250));
-        
         // este ultimo para probar el metodo con maxima capacidad excedida
         garage.agregarVehiculo(new Moto(500, 2, "BMW", 250));
-
-        System.out.println("Bienvenido al garage:");
+        
         System.out.println();
         System.out.println(garage.toString());
         System.out.println();
