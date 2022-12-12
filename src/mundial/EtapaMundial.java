@@ -2,6 +2,8 @@ package mundial;
 
 import java.util.ArrayList;
 
+import static kotlin.reflect.jvm.internal.impl.builtins.StandardNames.FqNames.list;
+
 public abstract class EtapaMundial {
 
     private String descripcionEtapa;
@@ -28,7 +30,7 @@ public abstract class EtapaMundial {
         this.partidos = partidos;
     }
 
-    public ArrayList<Partido> getPartidos() { return partidos;    }
+    public ArrayList<Partido> getPartidos() {return partidos;}
 
     public void addPartido (Partido partido) {
         getPartidos().add(partido);
@@ -36,6 +38,11 @@ public abstract class EtapaMundial {
 
     public abstract ArrayList<Equipo> getEquiposQueAvanzan ();
 
-
+    public void toStringPartidos () {
+        for (int i = 0; i < getPartidos().size();) {
+            System.out.println(getPartidos().get(i).toString());
+            i++;
+        }
+    }
 
 }

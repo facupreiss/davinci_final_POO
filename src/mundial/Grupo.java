@@ -11,6 +11,13 @@ public class Grupo extends EtapaMundial {
         this.setPartidos(new ArrayList<Partido>(0));
     }
 
+    public void setearPuntos () {
+    for (int i = 0; i < getPartidos().size();) {
+        getPartidos().get(i).setPuntos();
+        i++;
+        }
+    }
+
     @Override
     public ArrayList<Equipo> getEquiposQueAvanzan() {
         ArrayList<Equipo> equiposQueAvanzan = new ArrayList();
@@ -28,5 +35,6 @@ public class Grupo extends EtapaMundial {
         return equiposQueAvanzan;
     }
 
-    }
+
+}
 
