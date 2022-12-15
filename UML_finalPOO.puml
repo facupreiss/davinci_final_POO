@@ -1,0 +1,120 @@
+@startuml
+class Main {
++ {static} void main(String[])
+}
+class mundial.Equipo {
+- String nombre
+- ArrayList<Partido> partidosJugados
+- int puntaje
++ <<Create>> Equipo(String)
++ String getNombre()
++ void setNombre(String)
++ ArrayList<Partido> getPartidosJugados()
++ void setPartidosJugados(ArrayList<Partido>)
++ int getPuntaje()
++ void setPuntaje(int)
++ String toString()
+}
+abstract class mundial.EtapaMundial {
+- String descripcionEtapa
+- ArrayList<Partido> partidos
++ <<Create>> EtapaMundial()
++ <<Create>> EtapaMundial(String)
++ String getDescripcionEtapa()
++ void setDescripcionEtapa(String)
++ void setPartidos(ArrayList<Partido>)
++ ArrayList<Partido> getPartidos()
++ void addPartido(Partido)
++ {abstract}ArrayList<Equipo> getEquiposQueAvanzan()
++ void toStringPartidos()
+}
+abstract class sistemaGarage.vehiculos.Vehiculo {
+- double kilometraje
+- int numeroDeRuedas
+- String marca
++ <<Create>> Vehiculo(double,int,String)
++ double getKilometraje()
++ void setKilometraje(double)
++ int getNumeroDeRuedas()
++ void setNumeroDeRuedas(int)
++ String getMarca()
++ void setMarca(String)
++ String toString()
+}
+class sistemaGarage.Garage {
+- double precioPorRueda
+- int maximaCapacidad
+- ArrayList<Vehiculo> vehiculos
++ <<Create>> Garage()
++ <<Create>> Garage(double,int)
++ double getPrecioPorRueda()
++ void setPrecioPorRueda(double)
++ int getMaximaCapacidad()
++ void setMaximaCapacidad(int)
++ ArrayList<Vehiculo> getVehiculos()
++ void setVehiculos(ArrayList<Vehiculo>)
++ void agregarVehiculo(Vehiculo)
++ void removerVehiculo(Vehiculo)
++ double precioCambiarTodasLasRuedas()
++ double kilometrajeMedio()
++ void toStringVehiculos()
++ String toString()
+}
+class sistemaGarage.vehiculos.Auto {
+- int numeroDePuertas
++ <<Create>> Auto(double,int,String,int)
++ int getNumeroDePuertas()
++ void setNumeroDePuertas(int)
++ String toString()
+}
+class mundial.Llave {
++ <<Create>> Llave(String)
++ ArrayList<Equipo> getEquiposQueAvanzan()
+}
+class mundial.Partido {
+- Date fecha
+- Equipo local
+- Equipo visitante
+- Resultado resultado
++ <<Create>> Partido()
++ <<Create>> Partido(Date,Equipo,Equipo,Resultado)
++ Date getFecha()
++ void setFecha(Date)
++ Equipo getLocal()
++ void setLocal(Equipo)
++ Equipo getVisitante()
++ void setVisitante(Equipo)
++ Resultado getResultado()
++ void setResultado(Resultado)
++ void setPuntos()
++ String toString()
+}
+class mundial.Resultado {
+- int golesLocal
+- int golesVisitante
++ <<Create>> Resultado()
++ int getGolesLocal()
++ int getGolesVisitante()
++ boolean ganoLocal()
++ boolean empate()
++ String toString()
+}
+class sistemaGarage.vehiculos.Moto {
++ int cilindrado
++ <<Create>> Moto(double,int,String,int)
++ int getCilindrado()
++ void setCilindrado(int)
++ String toString()
+}
+class mundial.Grupo {
++ <<Create>> Grupo(String)
++ void setearPuntos()
++ ArrayList<Equipo> getEquiposQueAvanzan()
+}
+
+
+sistemaGarage.vehiculos.Vehiculo <|-- sistemaGarage.vehiculos.Auto
+mundial.EtapaMundial <|-- mundial.Llave
+sistemaGarage.vehiculos.Vehiculo <|-- sistemaGarage.vehiculos.Moto
+mundial.EtapaMundial <|-- mundial.Grupo
+@enduml
